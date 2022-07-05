@@ -41,7 +41,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'rpg', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'rpg', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'jangan dipencet', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'UTAMA',
@@ -66,7 +66,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'audio': 'Pengubah Suara',
     'jadibot': 'Jadi Bot',
     'info': 'Info',
-    '': 'Tanpa Kategori',
+    'Jangan Dipencet': 'Gg',
   }
   if (teks == 'game') tags = {
     'game': 'Game'
@@ -129,8 +129,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'info') tags = {
     'info': 'Info'
   }
-  if (teks == 'tanpakategori') tags = {
-    '': 'Tanpa Kategori'
+  if (teks == 'jangan dipencet') tags = {
+    '': 'Gw Yatim Bg'
   }
   if (teks == 'owner') tags = {
     'owner': 'Owner',
@@ -245,7 +245,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
           { title: 'Pengubah Suara', rowId: `${_p + command} audio` },
           { title: 'Jadi Bot', rowId: `${_p + command} jadibot` },
           { title: 'Info', rowId: `${_p +command} info` },
-          { title: 'Tanpa Kategori', rowId: `${_p + command} tanpakategori` },
+          { title: 'Jangan Dipencet', rowId: `${_p + command} Gw Yatim Bg` },
           { title: 'Owner', rowId: `${_p + command} owner` },
         ]
       }
@@ -264,23 +264,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 • Role       : *${role}*
 • Level      : *${level}*
 
-❏ 𝙏𝙄𝙈𝙀
-» Wib : *${time}*
-» Tanggal : *${week} ${weton} ${date}*
+❏ 
 
-❏ 𝙏𝘼𝙃𝙐𝙉 𝘽𝘼𝙍𝙐
-_*${jhari} Hari ${jjam} Jam ${mmmenit} Menit ${ddetik} Detik*_
 
-❏ 𝙍𝘼𝙈𝘼𝘿𝘼𝙉
-_*${harii} Hari ${jamm} Jam ${menitt} Menit ${detikk} Detik*_
-
-❏ 𝙐𝙇𝘼𝙉𝙂 𝙏𝘼𝙃𝙐𝙉 𝙊𝙒𝙉𝙀𝙍
-_*${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik*_
-
-${pe}Note: Jika ada Fitur yg Error Lapor ke owner${pe}`,
+${pe}By : Raf Botz`,
       footer: wm,
       title: judul,
-      buttonText: "Klik Disini",
+      buttonText: "Pencet Yatim",
       sections
     }
     return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
@@ -334,9 +324,9 @@ ${pe}Note: Jika ada Fitur yg Error Lapor ke owner${pe}`,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, await genProfile(conn, m), text.trim(), wm, `🏅Owner`, `${_p}owner`, `🎖ThanksTo`, `${_p}tqto`, `🎗  Donasi  🎗`, `${_p}donasi`, m)
+    await conn.send3TemplateButtonImg(m.chat, await genProfile(conn, m), text.trim(), wm, `Own Gnz😎`, `${_p}owner`, `Tq Dek🗿`, `${_p}tqto`, `Donasi😙🚬`, `${_p}donasi`, m)
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Menu Eror Tolol', m)
     throw e
   }
 }
