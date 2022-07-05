@@ -1,17 +1,19 @@
-const limit = 2000
+const limit = 50000
 const potion = 500
 const Spotion = 150 
 const Bdiamond = 900
 const Sdiamond = 750
-const Bcommon = 200
-const Scommon = 20
-const Suncommon = 100
-const Buncommon = 600
-const Bmythic = 2000 
-const Smythic = 500
-const Blegendary = 7500 
-const Slegendary = 3000
-const Bsampah = 10
+const Bmbox = 15000000
+const Smbox = 2000
+const Bcommon = 500000
+const Scommon = 250000
+const Suncommon = 750000
+const Buncommon = 450000
+const Bmythic = 1000000
+const Smythic = 8500000
+const Blegendary = 3500000
+const Slegendary = 1000000
+const Bsampah = 100000000000
 const Ssampah = 2
 const Bkayu = 500
 const Skayu = 200
@@ -34,9 +36,10 @@ Contoh penggunaan: *${usedPrefix}shop buy potion 1*\n\n
 List Barang:\n\n
 *鈾伙笍Barang                       |馃挷Harga beli*\n` +
 '```' + `
-${rpg.emoticon('limit')}Limit          :  ${limit}
-${rpg.emoticon('potion')}Potion         :  ${potion}
-${rpg.emoticon('diamond')}Diamond        :  ${Bdiamond}
+${rpg.emoticon('limit')}Limit           :  ${limit}
+${rpg.emoticon('potion')}Potion           :  ${potion}
+${rpg.emoticon('diamond')}Diamond       :  ${Bdiamond}
+${rpg.emoticon('mbox')}Mbox.              :  ${Bmbox}
 ${rpg.emoticon('common')}Common         :  ${Bcommon}
 ${rpg.emoticon('uncommon')}Uncommon       :  ${Buncommon}
 ${rpg.emoticon('mythic')}Mythic         :  ${Bmythic}
@@ -50,8 +53,9 @@ ${rpg.emoticon('iron')}Iron           :  ${Biron}`.trim() +
 '```'
 + '\n\n*鈾伙笍Barang                       | 馃挷Harga Jual*\n' +
 '```' + `
-${rpg.emoticon('potion')}Potion         :  ${Spotion}
-${rpg.emoticon('diamond')}Diamond        :  ${Sdiamond}
+${rpg.emoticon('potion')}Potion           : ${Spotion}
+${rpg.emoticon('diamond')}Diamond       :  ${Sdiamond}
+${rpg.emoticon('mbox')}Mbox.              : ${Smbox}
 ${rpg.emoticon('common')}Common         :  ${Scommon}
 ${rpg.emoticon('uncommon')}Uncommon       :  ${Suncommon}
 ${rpg.emoticon('mythic')}Mythic         :  ${Smythic}
@@ -117,6 +121,13 @@ ${rpg.emoticon('iron')}Iron           :  ${Siron}\n\n
                                 global.db.data.users[m.sender].money -= Bdiamond * count
                                 conn.sendButton(m.chat, `Succes membeli ${count} ${rpg.emoticon('diamond')}Diamond dengan harga ${Bdiamond * count} ${rpg.emoticon('money')}Money`, wm, 'inventory', usedPrefix + 'inv', m)
                             } else conn.send2Button(m.chat, `Uang anda tidak cukup untuk membeli ${count} ${rpg.emoticon('diamond')}Diamond dengan harga ${Bdiamond * count} ${rpg.emoticon('money')}money`, wm, 'inventory', usedPrefix + 'inv', 'claim', usedPrefix + 'claim', m)
+                        break
+                    case 'mbox':
+                            if (global.db.data.users[m.sender].money >= Bmbox * count) {
+                                global.db.data.users[m.sender].mbox += count * 1
+                                global.db.data.users[m.sender].money -= Bmbox * count
+                                conn.sendButton(m.chat, `Succes membeli ${count} ${rpg.emoticon('mbox')}Mbox dengan harga ${Bmbox * count} ${rpg.emoticon('money)}`, wm, 'inventory', usedPrefix + 'inv', m) 
+                            } else conn.send2Button(m.chat, `Uang anda tidak cukup untuk membeli ${count} ${rpg.emoticon('mbox')}Mbox dengan harga ${Bmbox * count} ${rpg.emoticon('money')}money`, wm, 'inventory', usedPrefix + 'inv', 'claim', usedPrefix + 'claim', m) 
                         break
                     case 'common':
                             if (global.db.data.users[m.sender].money >= Bcommon * count) {
@@ -203,6 +214,13 @@ ${rpg.emoticon('iron')}Iron           :  ${Siron}\n\n
                             global.db.data.users[m.sender].iron -= count * 1
                             conn.reply(m.chat, `Succes menjual ${count} Iron dengan harga ${Siron * count} money`.trim(), m)
                         } else conn.reply(m.chat, `Iron kamu tidak cukup`.trim(), m)
+                        break
+                    case 'mbox':
+                        if (global.db.data.users[m.sender].mbox >= count * 1) {
+                            global.db.data.users[m.sender].money += smbox * count
+                            global.db.data.users[m.sender].mbox -= count * 1
+                            conn.reply(m.chat, `Succes menjual ${count} Mbox dengan harga ${Smbox * count} money`.trim(), m) 
+                        } else conn.reply(m.chat, `Mbox kamu tidak cukup`.trim(), m) 
                         break
                     case 'common':
                         if (global.db.data.users[m.sender].common >= count * 1) {
@@ -304,7 +322,13 @@ ${rpg.emoticon('iron')}Iron           :  ${Siron}\n\n
                             global.db.data.users[m.sender].money -= Bdiamond * count
                             conn.sendButton(m.chat, `Succes membeli ${count} ${rpg.emoticon('diamond')}Diamond dengan harga ${Bdiamond * count} ${rpg.emoticon('money')}Money`, wm, 'inventory', usedPrefix + 'inv', m)
                         } else conn.send2Button(m.chat, `Uang anda tidak cukup untuk membeli ${count} ${rpg.emoticon('diamond')}Diamond dengan harga ${Bdiamond * count} ${rpg.emoticon('money')}money`, wm, 'inventory', usedPrefix + 'inv', 'claim', usedPrefix + 'claim', m)
-                    
+                    break
+                case 'mbox':
+                        if (global.db.data.users[m.sender].money >= Bmbox *count) {
+                            global.db.data.users[m.sender].mbox += count * 1
+                            global.db.data.users[m.sender].money -= Bmbox * count
+                            conn.sendButton(m.chat, `Succes membeli ${count} ${rpg.emoticon('mbox')}Mbox dengan harga ${Bmbox * count} ${rpg.emoticon('money')}Money`, wm, 'inventory', usedPrefix + 'inv', m) 
+                        } else conn.send2Button(m.chat, `Uang anda tidak cukup untuk membeli ${count} $rpg.emoticon('mbox')}Mbox dengan harga ${Bmbox * count} ${rpg.emoticon('mbox')}money`, wm, 'inventory', usedPrefix + 'inv', 'claim', usedPrefix + 'claim', m) 
                     break
                 case 'common':
                         if (global.db.data.users[m.sender].money >= Bcommon * count) {
@@ -394,6 +418,13 @@ ${rpg.emoticon('iron')}Iron           :  ${Siron}\n\n
                         global.db.data.users[m.sender].iron -= count * 1
                         conn.reply(m.chat, `Succes menjual ${count} Iron dengan harga ${Siron * count} money`.trim(), m)
                     } else conn.reply(m.chat, `Iron kamu tidak cukup`.trim(), m)
+                    break
+                case 'mbox':
+                    if (global.db.data.users[m.sender].mbox >= count * 1) {
+                        global.db.data.users[m.sender].money += Smbox * count
+                        global.db.data.users[m.sender].mbox -= count * 1
+                        conn.reply(m.chat, `Succes menjual ${count} Mbox dengan harga ${Smbox * count} money`.trim(), m)
+                    } else conn.reply(m.chat, `Mbox kamu tidak cukup`.trim(), m) 
                     break                
                 case 'common':
                     if (global.db.data.users[m.sender].common >= count * 1) {
