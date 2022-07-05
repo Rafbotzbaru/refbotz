@@ -8,10 +8,17 @@ let handler = async (m, { conn }) => {
   title: `${await conn.getName(conn.user.jid)}`,
   description: ` *• SEWA BOT & UP TO PREMIUM •*
         
-karena bot baru di buat jadi untuk join gc free :)
-Lalu untuk premium chat own aja
+Sewabot :
+5k 1 Minggu
+15k 1Bulan
+25k Permanen
+
+Premium :
+10k 2Minggu
+20k 2bulan
+30k Permanen
 `,
-  buttonText: 'Harga Bisa Di pertimbangkan',
+  buttonText: 'Owner Baik:)',
   listType: 2,
   productListInfo: {
   productSections: [{
@@ -21,7 +28,7 @@ Lalu untuk premium chat own aja
   jpegThumbnail: d },
   businessOwnerJid: `${owner[0]}@s.whatsapp.net`
   },
-  footerText: 'https://github.com/AhmdLui',
+  footerText: 'Ref Botz Wa:)',
   }},{})
   conn.relayMessage(prepare.key.remoteJid,prepare.message,{messageId:prepare.key.id})
 }
