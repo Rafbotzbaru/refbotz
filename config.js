@@ -4,8 +4,8 @@ global.mods = JSON.parse(fs.readFileSync('./src/moderator.json')) // Want some h
 global.thumbt = global.img
 global.fsx = 999999999999
 global.kontak = [
-['6282146092695', 'AhmdLui', 'AhmdLui', 'ayonimasangat@gmail.com', true],
-['6289655134392', 'Rika', 'Rika❤️', 'Nothing!', true]
+['6281946945315', 'Asyraf', 'Asyraf 6Youu', 'wekasenpai@gmail.com', true],
+['6281946945315', 'Asyraf', 'Asyraf 6Youu', 'rafbotzwhatsapp@gmail.com', true]
 
 ]
 global.APIs = { // API Prefix
@@ -37,23 +37,23 @@ global.APIKeys = { // APIKey Here
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
 
-global.WM = '𝑴𝒚𝑩𝒐𝒕-𝑴𝒖𝒍𝒕𝒊 𝑫𝒆𝒗𝒊𝒄𝒆 𝑩𝒚 Kami-sama'
-global.linkgc = 'https://chat.whatsapp.com/CnQV9lNcHuIENb8SQ9CaYP'
-global.linkig = 'https://www.instagram.com/ahmdlui'
+global.WM = 'Ref Bot Wa'
+global.linkgc = 'https://chat.whatsapp.com/CRrj0z3HgeX39XHNUt0M9V'
+global.linkig = 'https://www.instagram.com/asyrafsixyouu'
 global.deslink = ''
-global.titlink = 'Folllow me on Instagram'
-global.bodlink = '@ahmdlui'
+global.titlink = 'Follow Gw Kontol'
+global.bodlink = '@asyrafsixyouu'
 
-global.wait = '_*𝐬𝐞𝐝𝐚𝐧𝐠 𝐝𝐢 𝐩𝐫𝐨𝐬𝐞𝐬 ...*_'
-global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ..*_'
+global.wait = '_*Bokep Upin Ipin Sedang Di Proses...*_'
+global.eror = '_*Eror Kontol*_'
 
 //========Url Template Buttons==========//
-global.dtu = '𝑭𝒐𝒍𝒍𝒐𝒘'
-global.urlnya = "https://www.instagram.com/ahmdlui"
+global.dtu = 'Ref Botz'
+global.urlnya = "https://www.instagram.com/asyrafsixyouu"
 
 //============= callButtons ============//
-global.dtc = '𝒄𝒂𝒍𝒍 𝒐𝒘𝒏𝒆𝒓'
-global.phn = '+62 895-3362-82144'
+global.dtc = 'Ref Botz'
+global.phn = '+44 7533 021061'
 
 //========== Tampilan Bot =============//
 global.sa = '╭─'
@@ -103,6 +103,7 @@ global.rpg = {
       potion: '🥤',
       diamond: '💎',
       
+      mbox: '🗿'
       common: '📦',
       uncommon: '🎁',
       mythic: '🗳️',
