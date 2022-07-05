@@ -53,7 +53,7 @@ global.urlnya = "https://www.instagram.com/asyrafsixyouu"
 
 //============= callButtons ============//
 global.dtc = 'Ref Botz'
-global.phn = '+44 7533 021061'
+global.phn = '+62 856-4660-6905'
 
 //========== Tampilan Bot =============//
 global.sa = '╭─'
@@ -75,9 +75,9 @@ global.thumbnailUrl = [
 ]
 
 //============= Games ================//
-global.benar = '_*Benar✅*_'
-global.salah = '_*Salah❌*_'
-global.dikit = "dikit lagi, semangat ya :')"
+global.benar = '_*Benar tolol*_'
+global.salah = '_*Salah ngntod*_'
+global.dikit = "dikit lagi Tolol"
 
 global.multiplier = 100 // The higher, The harder levelup
 
