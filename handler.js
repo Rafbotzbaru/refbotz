@@ -35,21 +35,21 @@ module.exports = {
         global.author = 'Anjim'
         //global.author = 'The.sad.boy01'
         global.wm2 = global.data.namabot + ' ' + global.data.owner
-        global.wm = 'Rika ❤️'
-        global.colong1 = 'Ciss 📸'
+        global.wm = 'Ref Botz'
+        global.colong1 = 'Kntl'
         global.colong2 = ''
         global.kontak2 = [
-        ['62895336282144', '𝚃𝚑𝚎.𝚂𝚊𝚍.𝙱𝚘𝚢𝟶𝟷', 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'drakblue3@gmail.com', true],
-        ['6282140373458', 'Raxcel-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6285691387625', 'Evil-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6285691387625', 'Evil-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6285691387625', 'Evil-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6285691387625', 'Evil-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6285691387625', 'Evil-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6285691387625', 'Evil-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6285691387625', 'Evil-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6285691387625', 'Evil-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6285691387625', 'Evil-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true]
+        ['6281946945315', 'Asyraf 6Youu', 'Owner Ref Botz', 'wekasenpai@gmail.com', true],
+        ['447533021061', 'Ref Botz',  'Bot WhatsApp', 'Nothing!', true],
+        ['447533021061', 'Ref Botz', 'Bot WhatsApp', 'Nothing!', true],
+        ['447533021061', 'Ref Botz', 'Bot WhatsApp', 'Nothing!', true],
+        ['447533021061', 'Ref Botz', 'Bot WhatsApp', 'Nothing!', true],
+        ['447533021061', 'Ref Botz', 'Bot WhatsApp', 'Nothing!', true],
+        ['447533021061', 'Ref Botz', 'Bot WhatsApp', 'Nothing!', true],
+        ['447533021061', 'Ref Botz', 'Bot WhatsApp', 'Nothing!', true],
+        ['447533021061', 'Ref Botz', 'Bot WhatsApp', 'Nothing!', true],
+        ['447533021061', 'Ref Botz', 'Bot WhatsApp', 'Nothing!', true],
+        ['447533051061', 'Ref Botz', 'Bot WhatsApp', 'Nothing!', true]
         ]
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
@@ -86,6 +86,7 @@ module.exports = {
                     if (!isNumber(user.batu)) user.batu = 0
                     if (!isNumber(user.kayu)) user.kayu = 0
                     if (!isNumber(user.string)) user.string = 0  
+                    if (!isNumber(user.mbox)) user.mbox = 0
                     if (!isNumber(user.common)) user.common = 0
                     if (!isNumber(user.uncommon)) user.uncommon = 0
                     if (!isNumber(user.mythic)) user.mythic = 0
@@ -256,6 +257,7 @@ module.exports = {
                     money: 0,
                     diamond: 0,
                     iron: 0,
+                    mbox: 0,
                     common: 0,
                     uncommon: 0,
                     mythic: 0,
