@@ -255,7 +255,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 ❏ *U S E R   I N F O*
 • Nama    : *${name}*
 • Limit   : *${limit}*
-• Status  : *${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner 🗿' : 'Users ⚔️'}*
+• Status  : *${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner🗿' : 'Users 😒}*
 • Premium : *${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}*
 
 ❏ *S T A T U S   I N F O*
@@ -264,8 +264,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 • Role       : *${role}*
 • Level      : *${level}*
 
-❏ 
-
+❏ *_Jangab Spam ~Kontol_~*
 
 ${pe}By : Raf Botz`,
       footer: wm,
